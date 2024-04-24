@@ -1,18 +1,14 @@
-!/usr/bin/env python3
-""" a python module to loop 10 times """
-import random
-import asyncio
+#!/usr/bin/env python3
+''' coroutine called async_generator that takes no arguments.'''
+
+from asyncio import sleep
+from random import random
 from typing import Generator
 
 
 async def async_generator() -> Generator[float, None, None]:
-    """
-    async_generator - function to loop 10 times
-    Arguments:
-        no arguments
-    Returns:
-        nothing
-    """
+    ''' Generator that yields a random value between 0 and 10 every second,
+        10 times. '''
     for i in range(10):
-        await asyncio.sleep(1)
-        yield random.uniform(0, 10)
+        await sleep(1)
+        yield 10 * random()
