@@ -15,4 +15,4 @@ async def measure_runtime() -> float:
                  async_comprehension(), async_comprehension())
     next_time = time()
 
-    return next_time - first_time)
+    return next_time - first_time
